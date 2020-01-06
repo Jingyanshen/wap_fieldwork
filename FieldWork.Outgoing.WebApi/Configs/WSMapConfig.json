@@ -1,0 +1,20 @@
+{
+    "3D": false,
+    "2D": true,
+    "id": "map",
+    "mapOptions": {
+        "projection": "bd09ll",
+        "extent": [72.004, 0.8293, 137.8347, 55.8271],
+        "center": [121.5134762041, 31.2728898278],
+        "zoom": 10,
+        "minZoom": 2,
+        "maxZoom": 16
+    },
+    "layers": [{
+            "type": "baidu",
+            "url": "",
+            "label": "°Ù¶È",
+            "id": ""
+        }
+    ]
+}

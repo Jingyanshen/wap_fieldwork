@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D5A5B1D7-B96D-43BD-8E76-F14811AAC16E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FieldWork.Host.Runtime.Helper</RootNamespace>
+    <AssemblyName>FieldWork.Host.Runtime.Helper</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Host\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="SH3H.SDK.Definition">
+      <HintPath>..\packages\SH3H.SDK.Definition.1.0.0.5\lib\net45\SH3H.SDK.Definition.dll</HintPath>
+    </Reference>
+    <Reference Include="SH3H.SDK.Infrastructure">
+      <HintPath>..\packages\SH3H.SDK.Infrastructure.1.0.0.5\lib\net45\SH3H.SDK.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="SH3H.SDK.Infrastructure.Messaging">
+      <HintPath>..\packages\SH3H.SDK.Infrastructure.Messaging.1.0.0.5\lib\net45\SH3H.SDK.Infrastructure.Messaging.dll</HintPath>
+    </Reference>
+    <Reference Include="SH3H.SDK.WebApi.Core">
+      <HintPath>..\packages\SH3H.SDK.WebApi.Core.2.0.0.0\lib\net45\SH3H.SDK.WebApi.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.3\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common\Base64Helper.cs" />
+    <Compile Include="Common\HttpHelper.cs" />
+    <Compile Include="Common\ServiceHelper.cs" />
+    <Compile Include="Common\Const.cs" />
+    <Compile Include="Common\Utils.cs" />
+    <Compile Include="Helper\WapMessageHelper.cs" />
+    <Compile Include="Helper\WapPlatConsts.cs" />
+    <Compile Include="Message\MessageBody.cs" />
+    <Compile Include="Message\NotifyMessageBase.cs" />
+    <Compile Include="Message\SendConfigDto.cs" />
+    <Compile Include="Message\SendEmailMessageInDto.cs" />
+    <Compile Include="Message\SendEmailMessageOutDto.cs" />
+    <Compile Include="Message\SendMessageInDto.cs" />
+    <Compile Include="Message\SendMessageOutDto.cs" />
+    <Compile Include="Message\SendRabbitMqMessageInDto.cs" />
+    <Compile Include="Message\SendRabbitMqMessageOutDto.cs" />
+    <Compile Include="Message\SendSignalRMessageInDto.cs" />
+    <Compile Include="Message\SendSignalRMessageOutDto.cs" />
+    <Compile Include="Message\SendSmsMessageInDto.cs" />
+    <Compile Include="Message\SendSmsMessageOutDto.cs" />
+    <Compile Include="Message\SendTemplateMessageInDto.cs" />
+    <Compile Include="Message\SendToDto.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F7C4CF27-2F1F-46BD-BA16-AED80FCE6062}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SH3H.WAP.FieldWork.Controllers</RootNamespace>
+    <AssemblyName>SH3H.WAP.FieldWork.Controllers</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>..\bin\Debug\SH3H.WAP.FieldWork.Controllers.xml</DocumentationFile>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>..\bin\Release\SH3H.WAP.FieldWork.Controllers.xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>shanghai3h.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="SH3H.SDK.Definition, Version=1.0.0.5, Culture=neutral, PublicKeyToken=74ba8b940628b95d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\SH3H.SDK.Definition.1.0.0.5\lib\net45\SH3H.SDK.Definition.dll</HintPath>
+    </Reference>
+    <Reference Include="SH3H.SDK.Infrastructure, Version=1.0.0.5, Culture=neutral, PublicKeyToken=74ba8b940628b95d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\SH3H.SDK.Infrastructure.1.0.0.5\lib\net45\SH3H.SDK.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="SH3H.SDK.Service.Core, Version=1.0.0.1, Culture=neutral, PublicKeyToken=74ba8b940628b95d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\SH3H.SDK.Service.Core.1.0.0.1\lib\net45\SH3H.SDK.Service.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="SH3H.SDK.Share, Version=1.0.0.17, Culture=neutral, PublicKeyToken=74ba8b940628b95d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\SH3H.SDK.Share.1.0.0.17\lib\net45\SH3H.SDK.Share.dll</HintPath>
+    </Reference>
+    <Reference Include="SH3H.SDK.WebApi.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=74ba8b940628b95d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\SH3H.SDK.WebApi.Core.2.0.0.0\lib\net45\SH3H.SDK.WebApi.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="SH3H.SharpFrame.Common, Version=1.0.0.1, Culture=neutral, PublicKeyToken=74ba8b940628b95d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\SH3H.SharpFrame.Common.1.0.0.1\lib\net45\SH3H.SharpFrame.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Swashbuckle.Core">
+      <HintPath>..\packages\Swashbuckle.Core.Net45.5.2.1\lib\net45\Swashbuckle.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Cors">
+      <HintPath>..\packages\Microsoft.AspNet.Cors.5.2.3\lib\net45\System.Web.Cors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.3\lib\net45\System.Web.Http.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Http.Cors">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Cors.5.2.3\lib\net45\System.Web.Http.Cors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.3\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FWConstructionSiteController.cs" />
+    <Compile Include="FWGridController.cs" />
+    <Compile Include="FWIssueController.cs" />
+    <Compile Include="FWPatrolCKPointController.cs" />
+    <Compile Include="FWPatrolGISRelationController.cs" />
+    <Compile Include="FWPatrolObjectController.cs" />
+    <Compile Include="FWPatrolObjectReportController.cs" />
+    <Compile Include="FWPatrolPeriodController.cs" />
+    <Compile Include="FWPatrolPlanController.cs" />
+    <Compile Include="FWPatrolTaskCKPointController.cs" />
+    <Compile Include="FWPatrolTaskController.cs" />
+    <Compile Include="FWPatrolTaskExtendController.cs" />
+    <Compile Include="FWUserController.cs" />
+    <Compile Include="FWVehicleController.cs" />
+    <Compile Include="FWWapUserAndRoleController.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FieldWork.Contracts\FieldWork.Contracts.csproj">
+      <Project>{e3b5836e-dbd3-44a2-9fe2-8b5be3f83235}</Project>
+      <Name>FieldWork.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FieldWork.Model\FieldWork.Model.csproj">
+      <Project>{b28b6518-ac1a-4b2d-89b5-e6e045fc360e}</Project>
+      <Name>FieldWork.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FieldWork.Service\FieldWork.Service.csproj">
+      <Project>{fda7815c-c165-4194-873c-56bbb9c8a320}</Project>
+      <Name>FieldWork.Service</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FieldWork.Share\FieldWork.Share.csproj">
+      <Project>{3f985f52-7cbf-4572-a9b2-6667d84d9eda}</Project>
+      <Name>FieldWork.Share</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="shanghai3h.snk" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

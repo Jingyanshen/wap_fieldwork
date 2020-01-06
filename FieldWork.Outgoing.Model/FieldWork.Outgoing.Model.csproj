@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2527D0AD-CD22-4452-8A6A-14B53E3E9E99}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FieldWork.Outgoing.Model</RootNamespace>
+    <AssemblyName>FieldWork.Outgoing.Model</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>shanghai3h.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="SH3H.SDK.Share">
+      <HintPath>..\packages\SH3H.SDK.Share.1.0.0.17\lib\net45\SH3H.SDK.Share.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ArriveTimeOut.cs" />
+    <Compile Include="BatchReportDetailsOut.cs" />
+    <Compile Include="BatchReportOut.cs" />
+    <Compile Include="CheckInPointOut.cs" />
+    <Compile Include="Common\OutgoingConsts.cs" />
+    <Compile Include="Common\HttpHelper.cs" />
+    <Compile Include="Common\ServiceHelper.cs" />
+    <Compile Include="Common\WapCommon.cs" />
+    <Compile Include="DriverOut.cs" />
+    <Compile Include="IssueOut.cs" />
+    <Compile Include="MeterInfoOut.cs" />
+    <Compile Include="MeterOut.cs" />
+    <Compile Include="PatrolCkpointOut.cs" />
+    <Compile Include="PatrolIssueRelationOut.cs" />
+    <Compile Include="PatrolManageOut.cs" />
+    <Compile Include="PatrolObjOut.cs" />
+    <Compile Include="PatrolstaffOut.cs" />
+    <Compile Include="PatrolIndivOut.cs" />
+    <Compile Include="PatrolTaskEndOut.cs" />
+    <Compile Include="PatrolTaskOut.cs" />
+    <Compile Include="PatrolTaskStartOut.cs" />
+    <Compile Include="PatrolTaskSummaryOut.cs" />
+    <Compile Include="PhoneOut.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QYSFacilityOut.cs" />
+    <Compile Include="RelationPipeOut.cs" />
+    <Compile Include="UserGridOut.cs" />
+    <Compile Include="Vehicle.cs" />
+    <Compile Include="VehicleOut.cs" />
+    <Compile Include="WSPlatformUserOut.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FieldWork.Model\FieldWork.Model.csproj">
+      <Project>{b28b6518-ac1a-4b2d-89b5-e6e045fc360e}</Project>
+      <Name>FieldWork.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FieldWork.Share\FieldWork.Share.csproj">
+      <Project>{3f985f52-7cbf-4572-a9b2-6667d84d9eda}</Project>
+      <Name>FieldWork.Share</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="shanghai3h.snk" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

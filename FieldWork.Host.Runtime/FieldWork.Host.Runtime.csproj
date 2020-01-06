@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3ACB4AA4-F3E0-4848-B575-6DC36FE0040B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FieldWork.Host.Runtime</RootNamespace>
+    <AssemblyName>FieldWork.Host.Runtime</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Host\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Dapper">
+      <HintPath>..\packages\Dapper.1.40\lib\net45\Dapper.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Quartz">
+      <HintPath>..\packages\Quartz.2.3.3\lib\net40\Quartz.dll</HintPath>
+    </Reference>
+    <Reference Include="SH3H.SDK.DataAccess.Core">
+      <HintPath>..\packages\SH3H.SDK.DataAccess.Core.1.0.0.5\lib\net45\SH3H.SDK.DataAccess.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="SH3H.SDK.DataAccess.Db, Version=1.0.0.10, Culture=neutral, PublicKeyToken=74ba8b940628b95d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\SH3H.SDK.DataAccess.Db.1.0.0.10\lib\net45\SH3H.SDK.DataAccess.Db.dll</HintPath>
+    </Reference>
+    <Reference Include="SH3H.SDK.Definition">
+      <HintPath>..\packages\SH3H.SDK.Definition.1.0.0.5\lib\net45\SH3H.SDK.Definition.dll</HintPath>
+    </Reference>
+    <Reference Include="SH3H.SDK.Infrastructure">
+      <HintPath>..\packages\SH3H.SDK.Infrastructure.1.0.0.5\lib\net45\SH3H.SDK.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="SH3H.SDK.Infrastructure.Messaging">
+      <HintPath>..\packages\SH3H.SDK.Infrastructure.Messaging.1.0.0.5\lib\net45\SH3H.SDK.Infrastructure.Messaging.dll</HintPath>
+    </Reference>
+    <Reference Include="SH3H.SDK.Share">
+      <HintPath>..\packages\SH3H.SDK.Share.1.0.0.17\lib\net45\SH3H.SDK.Share.dll</HintPath>
+    </Reference>
+    <Reference Include="SH3H.SDK.WebApi.Core">
+      <HintPath>..\packages\SH3H.SDK.WebApi.Core.2.0.0.0\lib\net45\SH3H.SDK.WebApi.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.3\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Helper\PatrolHostLog.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service\ManagerService.cs" />
+    <Compile Include="Service\PatrolSummaryService.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\FieldWork.Host.Runtime.DataAccess.SqlServer\FieldWork.Host.Runtime.DataAccess.SqlServer.csproj">
+      <Project>{97f12e8e-c867-4687-ba0c-7429100b69c4}</Project>
+      <Name>FieldWork.Host.Runtime.DataAccess.SqlServer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FieldWork.Host.Runtime.Message\FieldWork.Host.Runtime.Helper.csproj">
+      <Project>{d5a5b1d7-b96d-43bd-8e76-f14811aac16e}</Project>
+      <Name>FieldWork.Host.Runtime.Helper</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

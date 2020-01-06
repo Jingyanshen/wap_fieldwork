@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SH3H.WAP.Host</name>
+    </assembly>
+    <members>
+        <member name="M:SH3H.WAP.Service.Host.Program.Main(System.String[])">
+            <summary>
+            定义Host入口程序
+            </summary>
+            <param name="args">Host输入参数列表</param>
+            <returns>返回运行状态码</returns>
+        </member>
+        <member name="M:SH3H.WAP.Service.Host.Program._Main(System.String[])">
+            <summary>
+            实例的入口函数
+            </summary>
+            <param name="args">命令行参数列表</param>
+            <returns>返回状态码</returns>
+        </member>
+        <member name="M:SH3H.WAP.Service.Host.Program.UnhandledException(System.Object,System.UnhandledExceptionEventArgs)">
+            <summary>
+            未捕获异常处理
+            </summary>
+        </member>
+        <member name="P:SH3H.WAP.Service.Host.Program.ReturnCode">
+            <summary>
+            获取或设置返回码
+            </summary>
+        </member>
+    </members>
+</doc>

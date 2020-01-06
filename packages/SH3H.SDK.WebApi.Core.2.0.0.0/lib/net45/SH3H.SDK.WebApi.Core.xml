@@ -1,0 +1,521 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SH3H.SDK.WebApi.Core</name>
+    </assembly>
+    <members>
+        <member name="T:SH3H.SDK.WebApi.Core.ActionParamAttribute">
+            <summary>
+            定义Action参数特性，用于生成Resource脚本中的Action
+            </summary>
+        </member>
+        <member name="M:SH3H.SDK.WebApi.Core.ActionParamAttribute.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:SH3H.SDK.WebApi.Core.ActionParamAttribute.Params">
+            <summary>
+            获取或设置Action参数字符串
+            </summary>
+        </member>
+        <member name="P:SH3H.SDK.WebApi.Core.ActionParamAttribute.IsArray">
+            <summary>
+            获取或设置一个值用于表示返回值是否是数组
+            </summary>
+        </member>
+        <member name="P:SH3H.SDK.WebApi.Core.ActionParamAttribute.Headers">
+            <summary>
+            获取或设置Action的headers属性字符串
+            </summary>
+        </member>
+        <member name="P:SH3H.SDK.WebApi.Core.ActionParamAttribute.IsCache">
+            <summary>
+            获取或设置一个值用于表示是否将请求结果进行缓存
+            </summary>
+        </member>
+        <member name="T:SH3H.SDK.WebApi.Controllers.BaseController">
+            <summary>
+            定义API控制器抽象类，所有控制器应该集成当前控制器
+            </summary>    
+        </member>
+        <member name="M:SH3H.SDK.WebApi.Controllers.BaseController.GetService``1">
+            <summary>
+            根据服务类型获取服务对象实例
+            </summary>
+            <typeparam name="TService">服务类型</typeparam>
+            <returns>返回服务对象实例</returns>
+        </member>
+        <member name="M:SH3H.SDK.WebApi.Controllers.BaseController.GetToken">
+            <summary>
+            从消息头中获取Token
+            </summary>
+            <returns>返回Token</returns>
+        </member>
+        <member name="M:SH3H.SDK.WebApi.Controllers.BaseController.GetAppIdentity">
+            <summary>
+            从消息头中获取应用名称
+            </summary>
+            <returns>返回应用名称</returns>
+        </member>
+        <member name="M:SH3H.SDK.WebApi.Controllers.BaseController.GetUserId">
+            <summary>
+            从消息头中获取用户编号
+            </summary>
+            <returns>返回用户编号</returns>
+        </member>
+        <member name="M:SH3H.SDK.WebApi.Controllers.BaseController.GetHeaderValueByKey(System.String)">
+            <summary>
+            根据关键字从消息头中获取对应的值
+            </summary>
+            <param name="key">消息头中项名称</param>
+            <returns>返回消息头中查询的值或者返回NULL</returns>
+        </member>
+        <member name="T:SH3H.SDK.WebApi.Controllers.BaseController`1">
+            <summary>
+            定义API控制器抽象类，所有控制器应该集成当前控制器
+            </summary>
+            <typeparam name="TService">服务类型</typeparam>
+        </member>
+        <member name="P:SH3H.SDK.WebApi.Controllers.BaseController`1.Service">
+            <summary>
+            获取当前服务实例
+            </summary>
+        </member>
+        <member name="T:SH3H.SDK.WebApi.Controllers.BaseController`2">
+            <summary>
+            定义API控制器抽象类，扩展服务数量
+            </summary>
+            <typeparam name="TService1">服务类型1</typeparam>
+            <typeparam name="TService2">服务类型2</typeparam>
+        </member>
+        <member name="P:SH3H.SDK.WebApi.Controllers.BaseController`2.Service1">
+            <summary>
+            获取当前服务1实例
+            </summary>
+        </member>
+        <member name="P:SH3H.SDK.WebApi.Controllers.BaseController`2.Service2">
+            <summary>
+            获取当前服务2实例
+            </summary>
+        </member>
+        <member name="T:SH3H.SDK.WebApi.Controllers.BaseController`3">
+            <summary>
+            定义API控制器抽象类，扩展服务数量
+            </summary>
+            <typeparam name="TService1">服务类型1</typeparam>
+            <typeparam name="TService2">服务类型2</typeparam>
+            <typeparam name="TService3">服务类型3</typeparam>
+        </member>
+        <member name="P:SH3H.SDK.WebApi.Controllers.BaseController`3.Service1">
+            <summary>
+            获取当前服务1实例
+            </summary>
+        </member>
+        <member name="P:SH3H.SDK.WebApi.Controllers.BaseController`3.Service2">
+            <summary>
+            获取当前服务2实例
+            </summary>
+        </member>
+        <member name="P:SH3H.SDK.WebApi.Controllers.BaseController`3.Service3">
+            <summary>
+            获取当前服务2实例
+            </summary>
+        </member>
+        <member name="T:SH3H.SDK.WebApi.Core.Models.WapImage">
+            <summary>
+            定义WebApi图片响应类型
+            </summary>
+        </member>
+        <member name="T:SH3H.SDK.WebApi.Core.Models.WapByteArray">
+            <summary>
+            定义WebApi二级制数组响应类型
+            </summary>
+        </member>
+        <member name="T:SH3H.SDK.WebApi.Core.Models.WapResponse`1">
+            <summary>
+            定义WebApi响应对象
+            </summary>
+            <typeparam name="TReturn">返回值类型</typeparam>
+        </member>
+        <member name="M:SH3H.SDK.WebApi.Core.Models.WapResponse`1.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:SH3H.SDK.WebApi.Core.Models.WapResponse`1.#ctor(`0)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="value">返回值</param>
+        </member>
+        <member name="M:SH3H.SDK.WebApi.Core.Models.WapResponse`1.#ctor(`0,System.Int32)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="value">返回值</param>
+            <param name="code">返回代码</param>
+        </member>
+        <member name="M:SH3H.SDK.WebApi.Core.Models.WapResponse`1.#ctor(System.Int32,System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="code">返回代码</param>
+            <param name="message">返回消息</param>
+        </member>
+        <member name="M:SH3H.SDK.WebApi.Core.Models.WapResponse`1.#ctor(System.Int32,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="code">返回代码</param>
+            <param name="message">返回消息</param>
+            <param name="statusCode">状态码</param>
+        </member>
+        <member name="M:SH3H.SDK.WebApi.Core.Models.WapResponse`1.ExecuteAsync(System.Threading.CancellationToken)">
+            <inheritdoc/>
+        </member>
+        <member name="M:SH3H.SDK.WebApi.Core.Models.WapResponse`1.CreateResponseMessage">
+            <summary>
+            创建HTTP响应消息对象
+            </summary>
+            <returns>返回<see cref="T:System.Net.Http.HttpResponseMessage"/>类型对象</returns>
+        </member>
+        <member name="M:SH3H.SDK.WebApi.Core.Models.WapResponse`1.ToString">
+            <inheritdoc/>
+        </member>
+        <member name="P:SH3H.SDK.WebApi.Core.Models.WapResponse`1.Code">
+            <summary>
+            获取或设置返回码
+            </summary>
+        </member>
+        <member name="P:SH3H.SDK.WebApi.Core.Models.WapResponse`1.StatusCode">
+            <summary>
+            获取或设置HTTP状态码
+            </summary>        
+        </member>
+        <member name="P:SH3H.SDK.WebApi.Core.Models.WapResponse`1.Message">
+            <summary>
+            获取或设置返回消息字符串
+            </summary>
+        </member>
+        <member name="P:SH3H.SDK.WebApi.Core.Models.WapResponse`1.Data">
+            <summary>
+            获取或设置WebApi返回值
+            </summary>
+        </member>
+        <member name="M:SH3H.SDK.WebApi.Core.Models.WapByteArray.#ctor">
+            <summary>
+            内部构造函数
+            </summary>
+        </member>
+        <member name="M:SH3H.SDK.WebApi.Core.Models.WapByteArray.#ctor(System.Byte[])">
+            <summary>
+            构造函数
+            </summary>
+            <param name="bytes">二进制数组</param>
+        </member>
+        <member name="M:SH3H.SDK.WebApi.Core.Models.WapByteArray.CreateResponseMessage">
+            <summary>
+            创建HTTP响应消息对象
+            </summary>
+            <returns>
+            返回<see cref="T:System.Net.Http.HttpResponseMessage"/>类型对象
+            </returns>
+        </member>
+        <member name="M:SH3H.SDK.WebApi.Core.Models.WapImage.#ctor(System.Drawing.Image)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="image">图片对象</param>
+        </member>
+        <member name="M:SH3H.SDK.WebApi.Core.Models.WapImage.#ctor(System.Drawing.Image,System.Drawing.Imaging.ImageFormat)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="image">图片对象</param>
+            <param name="format">图片格式</param>
+        </member>
+        <member name="M:SH3H.SDK.WebApi.Core.Models.WapImage.#ctor(System.Byte[],System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="bytes">二进制数组</param>
+            <param name="mediaType">
+            图片类型，默认为image/png
+            其他可用图片类型包括：
+            - image/gif
+            - image/jpeg
+            - image/png
+            - image/bmp
+            - image/svg+xml
+            - image/tiff        
+            </param>
+        </member>
+        <member name="M:SH3H.SDK.WebApi.Core.Models.WapImage.CreateResponseMessage">
+            <summary>
+            创建HTTP响应消息对象
+            </summary>
+            <returns>
+            返回<see cref="T:System.Net.Http.HttpResponseMessage"/>类型对象
+            </returns>
+        </member>
+        <member name="P:SH3H.SDK.WebApi.Core.Models.WapImage.MediaType">
+            <summary>
+            获取或设置媒体类型
+            </summary>        
+        </member>
+        <member name="T:SH3H.SDK.WebApi.Core.Models.WapStream">
+            <summary>
+            定义WebApi数据流类型的响应对象
+            </summary>
+        </member>
+        <member name="M:SH3H.SDK.WebApi.Core.Models.WapStream.#ctor(System.IO.Stream)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="stream">返回数据流</param>
+        </member>
+        <member name="M:SH3H.SDK.WebApi.Core.Models.WapStream.CreateResponseMessage">
+            <summary>
+            创建HTTP响应消息对象
+            </summary>
+            <returns>
+            返回<see cref="T:System.Net.Http.HttpResponseMessage"/>类型对象
+            </returns>
+        </member>
+        <member name="T:SH3H.SDK.WebApi.Core.Models.WapNull">
+            <summary>
+            定义NULL返回值
+            </summary>
+        </member>
+        <member name="M:SH3H.SDK.WebApi.Core.Models.WapNull.#ctor">
+            <summary>
+            构造函数
+            </summary>        
+        </member>
+        <member name="M:SH3H.SDK.WebApi.Core.Models.WapNull.#ctor(System.Int32,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="code">返回代码</param>
+            <param name="message">返回消息</param>
+            <param name="statusCode">Http请求状态码</param>
+        </member>
+        <member name="T:SH3H.SDK.WebApi.Core.Models.WapBoolean">
+            <summary>
+            定义Boolean返回值类型
+            </summary>
+        </member>
+        <member name="M:SH3H.SDK.WebApi.Core.Models.WapBoolean.#ctor(System.Boolean)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="value">返回值</param>
+        </member>
+        <member name="T:SH3H.SDK.WebApi.Core.Models.WapInt16">
+            <summary>
+            定义Int32返回值类型
+            </summary>
+        </member>
+        <member name="M:SH3H.SDK.WebApi.Core.Models.WapInt16.#ctor(System.Int16)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="value">返回值</param>
+        </member>
+        <member name="T:SH3H.SDK.WebApi.Core.Models.WapInt32">
+            <summary>
+            定义Int32返回值类型
+            </summary>
+        </member>
+        <member name="M:SH3H.SDK.WebApi.Core.Models.WapInt32.#ctor(System.Int32)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="value">返回值</param>
+        </member>
+        <member name="T:SH3H.SDK.WebApi.Core.Models.WapInt64">
+            <summary>
+            定义Int64返回值类型
+            </summary>
+        </member>
+        <member name="M:SH3H.SDK.WebApi.Core.Models.WapInt64.#ctor(System.Int64)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="value">返回值</param>
+        </member>
+        <member name="T:SH3H.SDK.WebApi.Core.Models.WapSingle">
+            <summary>
+            定义Single返回值类型
+            </summary>
+        </member>
+        <member name="M:SH3H.SDK.WebApi.Core.Models.WapSingle.#ctor(System.Single)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="value">返回值</param>
+        </member>
+        <member name="T:SH3H.SDK.WebApi.Core.Models.WapDouble">
+            <summary>
+            定义Double返回值类型
+            </summary>
+        </member>
+        <member name="M:SH3H.SDK.WebApi.Core.Models.WapDouble.#ctor(System.Double)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="value">返回值</param>
+        </member>
+        <member name="T:SH3H.SDK.WebApi.Core.Models.WapString">
+            <summary>
+            定义String返回值类型
+            </summary>
+        </member>
+        <member name="M:SH3H.SDK.WebApi.Core.Models.WapString.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="value">返回值</param>
+        </member>
+        <member name="T:SH3H.SDK.WebApi.Core.Models.WapDateTime">
+            <summary>
+            定义DateTime返回值类型
+            </summary>
+        </member>
+        <member name="M:SH3H.SDK.WebApi.Core.Models.WapDateTime.#ctor(System.DateTime)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="value">返回值</param>
+        </member>
+        <member name="T:SH3H.SDK.WebApi.Core.Models.WapGuid">
+            <summary>
+            定义Guid返回值类型
+            </summary>
+        </member>
+        <member name="M:SH3H.SDK.WebApi.Core.Models.WapGuid.#ctor(System.Guid)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="value">返回值</param>
+        </member>
+        <member name="T:SH3H.SDK.WebApi.Core.Models.WapCollection`1">
+            <summary>
+            定义WebApi集合类型响应对象
+            </summary>
+            <typeparam name="TEntity">返回实体类型</typeparam>
+        </member>
+        <member name="M:SH3H.SDK.WebApi.Core.Models.WapCollection`1.#ctor(System.Collections.Generic.IEnumerable{`0})">
+            <summary>
+            构造函数
+            </summary>
+            <param name="entities">返回对象列表</param>
+        </member>
+        <member name="T:SH3H.SDK.WebApi.Core.Models.WapResponse2`1">
+            <summary>
+            定义WebApi响应对象
+            </summary>
+            <typeparam name="TReturn">返回值类型</typeparam>
+        </member>
+        <member name="M:SH3H.SDK.WebApi.Core.Models.WapResponse2`1.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:SH3H.SDK.WebApi.Core.Models.WapResponse2`1.#ctor(`0)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="value">返回值</param>
+        </member>
+        <member name="M:SH3H.SDK.WebApi.Core.Models.WapResponse2`1.#ctor(`0,System.Int32)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="value">返回值</param>
+            <param name="code">返回代码</param>
+        </member>
+        <member name="M:SH3H.SDK.WebApi.Core.Models.WapResponse2`1.#ctor(System.Int32,System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="code">返回代码</param>
+            <param name="message">返回消息</param>
+        </member>
+        <member name="M:SH3H.SDK.WebApi.Core.Models.WapResponse2`1.#ctor(System.Int32,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="code">返回代码</param>
+            <param name="message">返回消息</param>
+            <param name="statusCode">状态码</param>
+        </member>
+        <member name="M:SH3H.SDK.WebApi.Core.Models.WapResponse2`1.ExecuteAsync(System.Threading.CancellationToken)">
+            <inheritdoc/>
+        </member>
+        <member name="M:SH3H.SDK.WebApi.Core.Models.WapResponse2`1.CreateResponseMessage">
+            <summary>
+            创建HTTP响应消息对象
+            </summary>
+            <returns>返回<see cref="T:System.Net.Http.HttpResponseMessage"/>类型对象</returns>
+        </member>
+        <member name="P:SH3H.SDK.WebApi.Core.Models.WapResponse2`1.Code">
+            <summary>
+            获取或设置返回码
+            </summary>
+        </member>
+        <member name="P:SH3H.SDK.WebApi.Core.Models.WapResponse2`1.StatusCode">
+            <summary>
+            获取或设置HTTP状态码
+            </summary>        
+        </member>
+        <member name="P:SH3H.SDK.WebApi.Core.Models.WapResponse2`1.Message">
+            <summary>
+            获取或设置返回消息字符串
+            </summary>
+        </member>
+        <member name="P:SH3H.SDK.WebApi.Core.Models.WapResponse2`1.Data">
+            <summary>
+            获取或设置WebApi返回值
+            </summary>
+        </member>
+        <member name="T:SH3H.SDK.WebApi.Core.ResourceAttribute">
+            <summary>
+            定义资源特性，用于标识每个控制器所对应的资源
+            </summary>
+        </member>
+        <member name="M:SH3H.SDK.WebApi.Core.ResourceAttribute.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="name">模块名称</param>
+        </member>
+        <member name="P:SH3H.SDK.WebApi.Core.ResourceAttribute.Name">
+            <summary>
+            获取或设置模块名称
+            </summary>
+        </member>
+        <member name="P:SH3H.SDK.WebApi.Core.ResourceAttribute.Url">
+            <summary>
+            获取或设置资源URL路径
+            </summary>
+        </member>
+        <member name="P:SH3H.SDK.WebApi.Core.ResourceAttribute.Params">
+            <summary>
+            获取或设置参数列表
+            </summary>
+        </member>
+        <member name="T:SH3H.SDK.WebApi.Core.Models.WapArray">
+            <summary>
+            定义WebApi数组类型响应对象
+            </summary>
+        </member>
+        <member name="M:SH3H.SDK.WebApi.Core.Models.WapArray.#ctor(System.Array)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="array">返回对象数组</param>
+        </member>
+    </members>
+</doc>

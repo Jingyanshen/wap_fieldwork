@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B28B6518-AC1A-4B2D-89B5-E6E045FC360E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SH3H.WAP.FieldWork.Model</RootNamespace>
+    <AssemblyName>SH3H.WAP.FieldWork.Model</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>..\bin\Debug\SH3H.WAP.FieldWork.Model.xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>..\bin\Release\SH3H.WAP.FieldWork.Model.xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>shanghai3h.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AutoMapper">
+      <HintPath>..\packages\AutoMapper.4.2.1\lib\net45\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="SH3H.SDK.Definition, Version=1.0.0.5, Culture=neutral, PublicKeyToken=74ba8b940628b95d, processorArchitecture=MSIL">
+      <HintPath>..\packages\SH3H.SDK.Definition.1.0.0.5\lib\net45\SH3H.SDK.Definition.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="SH3H.SDK.Share, Version=1.0.0.17, Culture=neutral, PublicKeyToken=74ba8b940628b95d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\SH3H.SDK.Share.1.0.0.17\lib\net45\SH3H.SDK.Share.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Dto\DriverDto.cs" />
+    <Compile Include="Dto\DtoBase.cs" />
+    <Compile Include="Dto\FWCKPointDto.cs" />
+    <Compile Include="Dto\FWConstructionSiteDto.cs" />
+    <Compile Include="Dto\FWGridBuildTreeDto.cs" />
+    <Compile Include="Dto\FWGridDto.cs" />
+    <Compile Include="Dto\FWIssueDto.cs" />
+    <Compile Include="Dto\FWPatrolCKPointDto.cs" />
+    <Compile Include="Dto\FWPatrolGISRelationDto.cs" />
+    <Compile Include="Dto\FWPatrolIndivDto.cs" />
+    <Compile Include="Dto\FWPatrolIssueRelationDto.cs" />
+    <Compile Include="Dto\FWPatrolObjectDto.cs" />
+    <Compile Include="Dto\FWPatrolObjectReportDto.cs" />
+    <Compile Include="Dto\FWPatrolPeriodDto.cs" />
+    <Compile Include="Dto\FWPatrolPlanDto.cs" />
+    <Compile Include="Dto\FWPatrolPlanSummaryDto.cs" />
+    <Compile Include="Dto\FWPatrolTaskCKPointDto.cs" />
+    <Compile Include="Dto\FWPatrolTaskDto.cs" />
+    <Compile Include="Dto\FWPatrolTaskSummaryDto.cs" />
+    <Compile Include="Dto\FWUserDto.cs" />
+    <Compile Include="Dto\FWVehicleDto.cs" />
+    <Compile Include="Dto\FWWapUserAndRoleDto.cs" />
+    <Compile Include="Dto\Pagination\FWCKPointPageDto.cs" />
+    <Compile Include="Dto\Pagination\FWPatrolTaskCKPointPageDto.cs" />
+    <Compile Include="Dto\Pagination\FWPatrolTaskPageDto.cs" />
+    <Compile Include="Dto\Pagination\PaginationDto.cs" />
+    <Compile Include="Dto\Pagination\PaginationBaseDto.cs" />
+    <Compile Include="Dto\FWQYSFacilityDto.cs" />
+    <Compile Include="EntityBase.cs" />
+    <Compile Include="FWConstructionSite.cs" />
+    <Compile Include="FWGrid.cs" />
+    <Compile Include="FWIssue.cs" />
+    <Compile Include="FWPatrolCKPoint.cs" />
+    <Compile Include="Dto\FWPatrolManageDto.cs" />
+    <Compile Include="FWPatrolGISRelation.cs" />
+    <Compile Include="FWPatrolObject.cs" />
+    <Compile Include="FWPatrolObjectReport.cs" />
+    <Compile Include="FWPatrolPeriod.cs" />
+    <Compile Include="FWPatrolPlan.cs" />
+    <Compile Include="FWPatrolTask.cs" />
+    <Compile Include="FWPatrolTaskCKPoint.cs" />
+    <Compile Include="FWPatrolTaskSummary.cs" />
+    <Compile Include="FWUser.cs" />
+    <Compile Include="FWVehicle.cs" />
+    <Compile Include="FWPatrolIssueRelation.cs" />
+    <Compile Include="Message\MessageBody.cs" />
+    <Compile Include="Message\SendConfigDto.cs" />
+    <Compile Include="Message\SendEmailMessageInDto.cs" />
+    <Compile Include="Message\SendEmailMessageOutDto.cs" />
+    <Compile Include="Message\SendMessageInDto.cs" />
+    <Compile Include="Message\SendMessageOutDto.cs" />
+    <Compile Include="Message\SendRabbitMqMessageInDto.cs" />
+    <Compile Include="Message\SendRabbitMqMessageOutDto.cs" />
+    <Compile Include="Message\SendSignalRMessageInDto.cs" />
+    <Compile Include="Message\SendSignalRMessageOutDto.cs" />
+    <Compile Include="Message\SendSmsMessageInDto.cs" />
+    <Compile Include="Message\SendSmsMessageOutDto.cs" />
+    <Compile Include="Message\SendTemplateMessageInDto.cs" />
+    <Compile Include="Message\SendToDto.cs" />
+    <Compile Include="MeterNew.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="FWQYSFacility.cs" />
+    <Compile Include="ViewModels\BatchReportDetailsViewModel.cs" />
+    <Compile Include="ViewModels\BatchReportViewModel.cs" />
+    <Compile Include="ViewModels\FWPatrolObjectViewModel.cs" />
+    <Compile Include="ViewModels\FWPatrolPlanViewModel.cs" />
+    <Compile Include="ViewModels\FWIssueViewModel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Condition\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="shanghai3h.snk" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FieldWork.Share\FieldWork.Share.csproj">
+      <Project>{3f985f52-7cbf-4572-a9b2-6667d84d9eda}</Project>
+      <Name>FieldWork.Share</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

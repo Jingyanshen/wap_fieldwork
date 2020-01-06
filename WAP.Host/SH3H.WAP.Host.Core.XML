@@ -1,0 +1,537 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SH3H.WAP.Host.Core</name>
+    </assembly>
+    <members>
+        <member name="T:SH3H.WAP.Host.Core.Bootstraper">
+            <summary>
+            定义Host启动引导对象
+            </summary>
+        </member>
+        <member name="F:SH3H.WAP.Host.Core.Bootstraper.instance">
+            <summary>
+            定义启动器对象实例
+            </summary>
+        </member>
+        <member name="M:SH3H.WAP.Host.Core.Bootstraper.Get">
+            <summary>
+            获取启动器实例
+            </summary>
+            <returns>返回启动器对象实例</returns>
+        </member>
+        <member name="M:SH3H.WAP.Host.Core.Bootstraper.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:SH3H.WAP.Host.Core.Bootstraper.Bootstrap(System.String[])">
+            <summary>
+            定义Host引导程序入口
+            </summary>
+            <param name="args">引导参数列表</param>
+            <returns>
+            返回状态码
+            </returns>
+        </member>
+        <member name="M:SH3H.WAP.Host.Core.Bootstraper.Stop">
+            <summary>
+            停止服务
+            </summary>
+            <returns>返回状态码</returns>
+        </member>
+        <member name="M:SH3H.WAP.Host.Core.Bootstraper.LaunchRuntime(System.String[],SH3H.WAP.Host.Core.Configurations.WapConfigurationSection)">
+            <summary>
+            启动所有运行时
+            </summary>
+            <param name="args">命令行参数</param>
+            <param name="section">系统配置节对象</param>
+        </member>
+        <member name="M:SH3H.WAP.Host.Core.Bootstraper.ParseArgs(System.String[])">
+            <summary>
+            解析命令行参数列表
+            </summary>
+            <param name="args">命令行参数列表</param>
+            <returns>返回状态码</returns>
+        </member>
+        <member name="M:SH3H.WAP.Host.Core.Bootstraper.GetSection(System.String)">
+            <summary>
+            加载WSDP Host配置对象
+            </summary>
+            <param name="configFilePath">配置文件路径</param>
+            <returns>返回配置对象，如果未配置返回NULL</returns>
+        </member>
+        <member name="M:SH3H.WAP.Host.Core.Bootstraper.GetContainer(System.String,System.String,Microsoft.Practices.Unity.IUnityContainer)">
+            <summary>
+            创建并设置一个Unity对象容器
+            </summary>        
+            <param name="configFilePath">Unity配置文件路径</param>
+            <param name="containerName">Unity对象容器名称</param>
+            <param name="parentContainer">父容器对象</param>
+            <returns>返回Unity容器对象</returns>
+        </member>
+        <member name="M:SH3H.WAP.Host.Core.Bootstraper.GetContainer(System.String,System.String,System.String,Microsoft.Practices.Unity.IUnityContainer)">
+            <summary>
+            创建并设置一个Unity对象容器
+            </summary>        
+            <param name="containerKey">容器关键字</param>
+            <param name="configFilePath">Unity配置文件路径</param>
+            <param name="containerName">Unity对象容器名称</param>
+            <param name="parentContainer">父容器对象</param>
+            <returns>返回Unity容器对象</returns>
+        </member>
+        <member name="M:SH3H.WAP.Host.Core.Bootstraper.GetRuntime(System.String)">
+            <summary>
+            获取运行时实例
+            </summary>
+            <param name="name">运行时名称</param>
+            <returns>返回运行时对象</returns>
+        </member>
+        <member name="M:SH3H.WAP.Host.Core.Bootstraper.GetRuntimeContext(System.String)">
+            <summary>
+            获取运行时上下文对象
+            </summary>
+            <param name="name">运行时名称</param>
+            <returns>返回运行时上下文对象</returns>
+        </member>
+        <member name="P:SH3H.WAP.Host.Core.Bootstraper.Argument">
+            <summary>
+            获取或设置命令行参数对象
+            </summary>
+        </member>
+        <member name="P:SH3H.WAP.Host.Core.Bootstraper.ReturnCode">
+            <summary>
+            获取或设置返回码
+            </summary>
+        </member>
+        <member name="P:SH3H.WAP.Host.Core.Bootstraper.Runtimes">
+            <summary>
+            获取或设置运行时实例列表
+            </summary>
+        </member>
+        <member name="P:SH3H.WAP.Host.Core.Bootstraper.Contexts">
+            <summary>
+            获取或设置运行时上下文对象列表
+            </summary>        
+        </member>
+        <member name="T:SH3H.WAP.Host.Core.Configurations.WapConfigurationSection">
+            <summary>
+            定义WSDP Host配置段对象
+            </summary>
+        </member>
+        <member name="P:SH3H.WAP.Host.Core.Configurations.WapConfigurationSection.Runtimes">
+            <summary>
+            获取或设置运行时配置对象
+            </summary>
+        </member>
+        <member name="T:SH3H.WAP.Host.Core.Arguments">
+            <summary>
+            定义命令行参数解析对象
+            </summary>    
+        </member>
+        <member name="P:SH3H.WAP.Host.Core.Arguments.ConfigFilePath">
+            <summary>
+            获取或设置配置文件路径
+            </summary>
+        </member>
+        <member name="T:SH3H.WAP.Host.Core.Endpoints.WcfInboundEndpoint">
+            <summary>
+            定义基于WCF的入站端点
+            </summary>
+        </member>
+        <member name="M:SH3H.WAP.Host.Core.Endpoints.WcfInboundEndpoint.#ctor(SH3H.SDK.Host.Core.RuntimeContext)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="context">运行时上下文对象</param>
+        </member>
+        <member name="F:SH3H.WAP.Host.Core.Endpoints.WcfInboundEndpoint.host">
+            <summary>
+            定义服务宿主对象
+            </summary>
+        </member>
+        <member name="M:SH3H.WAP.Host.Core.Endpoints.WcfInboundEndpoint.Initialize(SH3H.SDK.Host.Core.Configurations.WapInboundConfigurationElement)">
+            <summary>
+            执行初始化过程
+            </summary>
+            <param name="element">入站端点配置对象</param>
+            <returns>
+            返回状态码
+            </returns>
+        </member>
+        <member name="M:SH3H.WAP.Host.Core.Endpoints.WcfInboundEndpoint.Dispose(System.Boolean)">
+            <summary>
+            释放内部资源
+            </summary>
+            <param name="disposing">资源是否已经释放</param>
+        </member>
+        <member name="T:SH3H.WAP.Host.Core.Endpoints.RabbitmqEndpoint">
+            <summary>
+            定义基于RabbitMQ的端点
+            </summary>
+        </member>
+        <member name="M:SH3H.WAP.Host.Core.Endpoints.RabbitmqEndpoint.#ctor(SH3H.SDK.Host.Core.RuntimeContext)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="context">运行时上下文对象</param>
+        </member>
+        <member name="F:SH3H.WAP.Host.Core.Endpoints.RabbitmqEndpoint.context">
+            <summary>
+            定义运行时上下文对象
+            </summary>
+        </member>
+        <member name="M:SH3H.WAP.Host.Core.Endpoints.RabbitmqEndpoint.Initialize(SH3H.SDK.Host.Core.Configurations.WapBusConfigurationElement,Microsoft.Practices.Unity.IUnityContainer)">
+            <summary>
+            执行初始化过程
+            </summary>
+            <param name="element">入站端点配置对象</param>
+            <param name="container">容器对象</param>
+            <returns>
+            返回状态码
+            </returns>
+        </member>
+        <member name="M:SH3H.WAP.Host.Core.Endpoints.RabbitmqEndpoint.Send(System.Object)">
+            <summary>
+            通过当前端点发送消息
+            </summary>
+            <param name="message">消息对象</param>
+        </member>
+        <member name="M:SH3H.WAP.Host.Core.Endpoints.RabbitmqEndpoint.Send(System.Object,System.String)">
+            <summary>
+            通过当前端点发送消息
+            </summary>
+            <param name="message">消息对象</param>
+            <param name="address">消息接收地址</param>
+        </member>
+        <member name="M:SH3H.WAP.Host.Core.Endpoints.RabbitmqEndpoint.SH3H#SDK#Host#Core#IInboundEndpoint#Initialize(SH3H.SDK.Host.Core.Configurations.WapInboundConfigurationElement)">
+            <summary>
+            执行初始化过程
+            </summary>
+            <param name="element">入站端点配置对象</param>
+            <returns>
+            返回状态码
+            </returns>
+        </member>
+        <member name="M:SH3H.WAP.Host.Core.Endpoints.RabbitmqEndpoint.SH3H#SDK#Host#Core#IOutboundEndpoint#Initialize(SH3H.SDK.Host.Core.Configurations.WapOutboundConfigurationElement)">
+            <summary>
+            执行初始化过程
+            </summary>
+            <param name="element">出站端点配置对象</param>
+            <returns>
+            返回状态码
+            </returns>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="M:SH3H.WAP.Host.Core.Endpoints.RabbitmqEndpoint.CreateServiceBus(System.String,System.String,Microsoft.Practices.Unity.IUnityContainer)">
+            <summary>
+            创建消息总线
+            </summary>
+            <param name="address">消息总线连接地址</param>
+            <param name="containerName">消息总线对应的Unity容器名称</param>
+            <param name="container">消息接受者Unity容器对象</param>
+            <returns>返回消息监听器对象</returns>
+        </member>
+        <member name="M:SH3H.WAP.Host.Core.Endpoints.RabbitmqEndpoint.Dispose(System.Boolean)">
+            <summary>
+            释放内部资源
+            </summary>
+            <param name="disposing">资源是否已经释放</param>
+        </member>
+        <member name="P:SH3H.WAP.Host.Core.Endpoints.RabbitmqEndpoint.Sender">
+            <summary>
+            获取或设置消息发送器对象
+            </summary>
+        </member>
+        <member name="P:SH3H.WAP.Host.Core.Endpoints.RabbitmqEndpoint.Listener">
+            <summary>
+            获取或设置消息监听器对象
+            </summary>
+        </member>
+        <member name="T:SH3H.WAP.Host.Core.Endpoints.RabbitMQEndpoint">
+            <summary>
+            定义基于RabbitMQ的端点
+            </summary>
+        </member>
+        <member name="M:SH3H.WAP.Host.Core.Endpoints.RabbitMQEndpoint.#ctor(SH3H.SDK.Host.Core.RuntimeContext)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="context">运行时上下文对象</param>
+        </member>
+        <member name="F:SH3H.WAP.Host.Core.Endpoints.RabbitMQEndpoint.context">
+            <summary>
+            定义运行时上下文对象
+            </summary>
+        </member>
+        <member name="M:SH3H.WAP.Host.Core.Endpoints.RabbitMQEndpoint.Initialize(System.String,System.String,Microsoft.Practices.Unity.IUnityContainer)">
+            <summary>
+            执行初始化过程
+            </summary>
+            <param name="element">入站端点配置对象</param>
+            <param name="container">容器对象</param>
+            <returns>
+            返回状态码
+            </returns>
+        </member>
+        <member name="M:SH3H.WAP.Host.Core.Endpoints.RabbitMQEndpoint.Send(System.Object)">
+            <summary>
+            通过当前端点发送消息
+            </summary>
+            <param name="message">消息对象</param>
+        </member>
+        <member name="M:SH3H.WAP.Host.Core.Endpoints.RabbitMQEndpoint.Send(System.Object,System.String)">
+            <summary>
+            通过当前端点发送消息
+            </summary>
+            <param name="message">消息对象</param>
+            <param name="address">消息接收地址</param>
+        </member>
+        <member name="M:SH3H.WAP.Host.Core.Endpoints.RabbitMQEndpoint.CreateServiceBus(System.String,System.String,Microsoft.Practices.Unity.IUnityContainer)">
+            <summary>
+            创建消息总线
+            </summary>
+            <param name="address">消息总线连接地址</param>
+            <param name="containerName">消息总线对应的Unity容器名称</param>
+            <param name="container">消息接受者Unity容器对象</param>
+            <returns>返回消息监听器对象</returns>
+        </member>
+        <member name="M:SH3H.WAP.Host.Core.Endpoints.RabbitMQEndpoint.Dispose(System.Boolean)">
+            <summary>
+            释放内部资源
+            </summary>
+            <param name="disposing">资源是否已经释放</param>
+        </member>
+        <member name="P:SH3H.WAP.Host.Core.Endpoints.RabbitMQEndpoint.Sender">
+            <summary>
+            获取或设置消息发送器对象
+            </summary>
+        </member>
+        <member name="P:SH3H.WAP.Host.Core.Endpoints.RabbitMQEndpoint.Listener">
+            <summary>
+            获取或设置消息监听器对象
+            </summary>
+        </member>
+        <member name="T:SH3H.WAP.Host.Core.Runtimes.RouterServiceRuntime">
+            <summary>
+            定义路由服务运行时对象
+            </summary>
+        </member>
+        <member name="M:SH3H.WAP.Host.Core.Runtimes.RouterServiceRuntime.Start(System.String[])">
+            <summary>
+            启动运行时
+            </summary>
+            <param name="args">命令行参数</param>
+            <returns>
+            返回状态码
+            </returns>
+        </member>
+        <member name="T:SH3H.WAP.Host.Core.Runtimes.SimulatorRuntime">
+            <summary>
+            定义模拟器运行时
+            </summary>
+        </member>
+        <member name="M:SH3H.WAP.Host.Core.Runtimes.SimulatorRuntime.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="F:SH3H.WAP.Host.Core.Runtimes.SimulatorRuntime.threads">
+            <summary>
+            定义线程列表
+            </summary>
+        </member>
+        <member name="M:SH3H.WAP.Host.Core.Runtimes.SimulatorRuntime.Start(System.String[])">
+            <summary>
+            启动运行时
+            </summary>
+            <param name="args">命令行参数</param>
+            <returns>
+            返回状态码
+            </returns>
+        </member>
+        <member name="M:SH3H.WAP.Host.Core.Runtimes.SimulatorRuntime.Stop">
+            <summary>
+            停止运行时
+            </summary>
+            <returns>
+            返回状态码
+            </returns>
+        </member>
+        <member name="T:SH3H.WAP.Host.Core.Runtimes.TimerServiceRuntime">
+            <summary>
+            定义定时服务运行时
+            </summary>
+        </member>
+        <member name="M:SH3H.WAP.Host.Core.Runtimes.TimerServiceRuntime.Start(System.String[])">
+            <summary>
+            启动运行时
+            </summary>
+            <param name="args">命令行参数</param>
+            <returns>
+            返回状态码
+            </returns>
+        </member>
+        <member name="M:SH3H.WAP.Host.Core.Runtimes.TimerServiceRuntime.Stop">
+            <summary>
+            停止运行时
+            </summary>
+            <returns>
+            返回状态码
+            </returns>
+        </member>
+        <member name="P:SH3H.WAP.Host.Core.Runtimes.TimerServiceRuntime.Scheduler">
+            <summary>
+            获取或设置运算服务调度器
+            </summary>
+        </member>
+        <member name="T:SH3H.WAP.Host.Core.Runtimes.UnityJobFactory">
+            <summary>
+            定义基于Unity的Job工厂对象
+            </summary>
+        </member>
+        <member name="M:SH3H.WAP.Host.Core.Runtimes.UnityJobFactory.#ctor(Microsoft.Practices.Unity.IUnityContainer)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="container">Unity容器对象</param>
+        </member>
+        <member name="M:SH3H.WAP.Host.Core.Runtimes.UnityJobFactory.NewJob(Quartz.Spi.TriggerFiredBundle,Quartz.IScheduler)">
+            <inheritdoc/>
+        </member>
+        <member name="M:SH3H.WAP.Host.Core.Runtimes.UnityJobFactory.ReturnJob(Quartz.IJob)">
+            <inheritdoc/>
+        </member>
+        <member name="P:SH3H.WAP.Host.Core.Runtimes.UnityJobFactory.Container">
+            <summary>
+            获取或设置Unity对象容器
+            </summary>
+        </member>
+        <member name="T:SH3H.WAP.Host.Core.Runtimes.WcfServiceRuntime">
+            <summary>
+            定义WCF服务运行时
+            </summary>
+        </member>
+        <member name="F:SH3H.WAP.Host.Core.Runtimes.WcfServiceRuntime.hosts">
+            <summary>
+            WCF宿主对象
+            </summary>
+        </member>
+        <member name="M:SH3H.WAP.Host.Core.Runtimes.WcfServiceRuntime.Start(System.String[])">
+            <summary>
+            启动运行时
+            </summary>
+            <param name="args">命令行参数</param>
+            <returns>
+            返回状态码
+            </returns>
+        </member>
+        <member name="M:SH3H.WAP.Host.Core.Runtimes.WcfServiceRuntime.Stop">
+            <summary>
+            停止运行时
+            </summary>
+            <returns>
+            返回状态码
+            </returns>
+        </member>
+        <member name="T:SH3H.WAP.Host.Core.Runtimes.WorkerServiceRuntime">
+            <summary>
+            定义Worker运行时对象
+            </summary>
+        </member>
+        <member name="M:SH3H.WAP.Host.Core.Runtimes.WorkerServiceRuntime.Start(System.String[])">
+            <summary>
+            启动运行时
+            </summary>
+            <param name="args">命令行参数</param>
+            <returns>
+            返回状态码
+            </returns>
+        </member>
+        <member name="T:SH3H.WAP.Host.Core.Jobs.TicktockJob">
+            <summary>
+            定义简单的TickTock定时器，每秒打印当前时间
+            </summary>
+        </member>
+        <member name="M:SH3H.WAP.Host.Core.Jobs.TicktockJob.#ctor(SH3H.SDK.Host.Core.RuntimeContext)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="context">运行时上下文对象</param>
+        </member>
+        <member name="P:SH3H.WAP.Host.Core.Jobs.TicktockJob.Context">
+            <summary>
+            获取或设置运行时上下文对象
+            </summary>
+        </member>
+        <member name="T:SH3H.WAP.Host.Core.Wcf.ServiceMessageInspector">
+            <summary>
+            定义WCF服务检查器，用于在服务端处理消息
+            </summary>
+        </member>
+        <member name="M:SH3H.WAP.Host.Core.Wcf.ServiceMessageInspector.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="F:SH3H.WAP.Host.Core.Wcf.ServiceMessageInspector.Logger">
+            <summary>
+            GDI日志记录器
+            </summary>
+        </member>
+        <member name="T:SH3H.WAP.Host.Core.Wcf.UnityInstanceProvider">
+            <summary>
+            定义了WCF服务实例化提供器对象，使用Unity作为服务对象实例化器
+            </summary>
+        </member>
+        <member name="M:SH3H.WAP.Host.Core.Wcf.UnityInstanceProvider.#ctor(Microsoft.Practices.Unity.IUnityContainer,System.Type)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="container">Unity对象容器</param>
+            <param name="contractType">契约类型对象</param>
+        </member>
+        <member name="F:SH3H.WAP.Host.Core.Wcf.UnityInstanceProvider.InstanceCount">
+            <summary>
+            当前总实例数
+            </summary>
+        </member>
+        <member name="P:SH3H.WAP.Host.Core.Wcf.UnityInstanceProvider.Container">
+            <summary>
+            获取Unity容器对象
+            </summary>
+        </member>
+        <member name="P:SH3H.WAP.Host.Core.Wcf.UnityInstanceProvider.ContractType">
+            <summary>
+            获取当前实例化提供器对应的协议类型
+            </summary>
+        </member>
+        <member name="T:SH3H.WAP.Host.Core.Wcf.UnityServiceBehavior">
+            <summary>
+            定义GDI服务行为对象
+            </summary>
+        </member>
+        <member name="M:SH3H.WAP.Host.Core.Wcf.UnityServiceBehavior.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:SH3H.WAP.Host.Core.Wcf.UnityServiceBehavior.#ctor(System.String,System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="containerName">Unity容器名称</param>
+            <param name="runtimeName">运行时名称</param>
+        </member>
+        <member name="P:SH3H.WAP.Host.Core.Wcf.UnityServiceBehavior.ContainerName">
+            <summary>
+            获取或设置Unity容器对象名称
+            </summary>
+        </member>
+        <member name="P:SH3H.WAP.Host.Core.Wcf.UnityServiceBehavior.RuntimeName">
+            <summary>
+            获取或设置当前WCF所在的运行时名称
+            </summary>        
+        </member>
+    </members>
+</doc>
